@@ -1,0 +1,188 @@
+/* #### Fontes Customizadas #### */
+@font-face {
+    font-family: 'Ghibli Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Ghibli Regular'), url('Eyad Al-Samman - Ghibli.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Ghibli Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Ghibli Bold'), url('Eyad Al-Samman - Ghibli-Bold.woff') format('woff');
+}
+
+/* #### Estilos Globais #### */
+body {
+    font-family: 'Ghibli Regular', 'Chakra Petch', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Texto escuro */
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d3e0; /* Rosa pastel */
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #f3a9c7;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-family: 'Ghibli Bold';
+    font-size: 28px;
+    margin: 0;
+}
+
+.header-gif {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: bounce 2s infinite ease-in-out;
+    transition: transform 0.3s;
+}
+
+.header-gif:hover {
+    transform: scale(1.2);
+}
+
+/* Animação do coração saindo */
+.header-gif::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/ylP4RoZ.png') no-repeat center center;
+    background-size: contain;
+    animation: floatHearts 2s infinite ease-in-out;
+    opacity: 0.5;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+/* Seção de Destaque */
+.chamada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    background-color: #f8d3e0;
+    text-align: center;
+}
+
+.chamada-texto {
+    margin-bottom: 20px;
+}
+
+.chamada h2 {
+    font-size: 26px;
+    color: #d13b8f; /* Rosa escuro */
+}
+
+.chamada p {
+    font-size: 16px;
+    color: #8b355a;
+}
+
+/* Contêiner de Vídeo */
+.video-container iframe {
+    border-radius: 15px;
+    border: 3px solid #f3a9c7;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Categoria de Vídeos */
+.categoria {
+    padding: 30px 20px;
+    background: #fdeff5; /* Fundo mais claro */
+    text-align: center;
+}
+
+.categoria h2 {
+    font-family: 'Ghibli Bold';
+    font-size: 24px;
+    color: #d13b8f;
+    margin-bottom: 20px;
+}
+
+.categoria-videos {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.categoria-videos a {
+    display: block;
+    position: relative;
+    width: 160px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid #f3a9c7;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.categoria-videos a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.categoria-videos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f3a9c7;
+    color: white;
+    font-family: 'Ghibli Bold';
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 2px solid #d67a94;
+}
+
+/* Animações */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: scale(0.8) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2) translateY(-40px);
+        opacity: 0;
+    }
+}
